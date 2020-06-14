@@ -1,0 +1,27 @@
+{
+    "development": {
+      "username": "reflect",
+      "password": "reflect123",
+      "database": "doctor",
+      "host": "127.0.0.1",
+      "dialect": "postgres",
+      "operatorAliases": false
+    },
+    "test": {
+        "username": "reflect",
+        "password": "reflect123", 
+      "database": "doctor",
+      "host": "127.0.0.1",
+      "dialect": "postgres"
+    },
+    "production": {
+      "username": "reflect",
+      "password": "reflect123",
+      "database": "doctor",
+      "host": "127.0.0.1",
+      "dialect": "postgres"
+    },
+    "sgMail": {
+      "key": "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"
+    }
+  }

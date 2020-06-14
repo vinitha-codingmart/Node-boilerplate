@@ -2,9 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const cors = require("cors");
-const jwt = require("./services/jwt");
 
-const server_port = 6000;
+const server_port = 5000;
 
 console.log("Environment State : ", process.env.NODE_ENV);
 
@@ -21,7 +20,7 @@ class Server {
 
 
   async initControllers() {
-    this.SampleController = require("./controllers/sample.js")();
+    this.UserController = require("./controllers/user.js")();
   }
 
   initRoutes() {
@@ -32,21 +31,19 @@ class Server {
     //verifying token
     app.use("/", async (req, res, next) => {
         try {
-            res.send("hello")
-          const decoded = await jwt.verify(req.token);
-          req.token_details = decoded
+          console.log("got")
           next();
         }
         catch (err) {
-          res.json({ code: 403, msg: "Token verification failed" })
+          res.json({ code: 403, msg: "Failed" })
         }
     });
 
 
 
     //sample route
-    const sampleRoute = require("./routes/sample.js")(this.SampleController);
-    app.use("/api/sample", sampleRoute.getRouter());
+    const userRoute = require("./routes/user.js")(this.UserController);
+    app.use("/api/user", userRoute.getRouter());
 
    
 

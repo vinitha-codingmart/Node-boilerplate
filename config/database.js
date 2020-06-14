@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize')
 const db = {}
 const sequelize = new Sequelize('doctor', 
-                                'reflect', 
-                                'reflect123', {
+                                'username', 
+                                'password', {
   host: 'localhost',
   dialect: 'postgres',
   logging: console.log,

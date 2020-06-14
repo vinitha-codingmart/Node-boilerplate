@@ -1,22 +1,22 @@
 {
     "development": {
-      "username": "reflect",
-      "password": "reflect123",
+      "username": "",
+      "password": "",
       "database": "doctor",
       "host": "127.0.0.1",
       "dialect": "postgres",
       "operatorAliases": false
     },
     "test": {
-        "username": "reflect",
-        "password": "reflect123", 
+        "username": "",
+        "password": "", 
       "database": "doctor",
       "host": "127.0.0.1",
       "dialect": "postgres"
     },
     "production": {
-      "username": "reflect",
-      "password": "reflect123",
+      "username": "",
+      "password": "",
       "database": "doctor",
       "host": "127.0.0.1",
       "dialect": "postgres"
